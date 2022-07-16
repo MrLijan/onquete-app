@@ -1,0 +1,14 @@
+.card-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--app-padding);
+  background-color: #fff;
+  box-shadow: var(--app-shadow-01);
+  border-radius: var(--app-border-radius);
+
+  h3 {
+    color: var(--text-color);
+  }
+}

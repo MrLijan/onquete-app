@@ -1,0 +1,24 @@
+<div class="page-wrapper">
+  <section class="header">
+    <h3>{{ surveyName }}</h3>
+  </section>
+
+  <section class="info">
+    <app-card [header]="texts.surveyInfo">
+      <div class="info-fields">
+        <app-input [label]="texts.surveyNameField" (onInput)="setSurveyName($event)"></app-input>
+        <app-textarea [label]="texts.surveyDescField"></app-textarea>
+      </div>
+    </app-card>
+  </section>
+
+  <section class="controls">
+    <div class="controls-wrapper">
+      <button pButton pRipple type="button" icon="pi pi-times"
+        class="p-button-rounded p-button-outlined p-button-danger" [pTooltip]="texts.tooltips.discardChanges"
+        tooltipPosition="top"></button>
+      <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-success"
+        [pTooltip]="texts.tooltips.saveChanges" tooltipPosition="top"></button>
+    </div>
+  </section>
+</div>
