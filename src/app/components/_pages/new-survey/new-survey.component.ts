@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Survey } from '@/app/types/survey.type';
 
 @Component({
   selector: 'app-new-survey',
@@ -7,6 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewSurveyComponent implements OnInit {
   surveyName: string = this.texts.nonameSurvey;
+  surveyData: Survey = {
+    name: '',
+    author: '',
+    slug: '',
+    description: '',
+    questions: [
+      { id: 1, title: "Give me some question", type: 1 },
+      { id: 2, title: "Give me some question", type: 1 },
+      { id: 3, title: "Give me some question", type: 1 },
+      { id: 4, title: "Give me some question", type: 1 },
+    ],
+  };
 
   constructor() { }
 
@@ -16,9 +29,10 @@ export class NewSurveyComponent implements OnInit {
   get texts() {
     return {
       nonameSurvey: "NONAME Survey",
-      surveyInfo: "Fill up the survey info",
-      surveyNameField: "Give it a Name",
-      surveyDescField: "Tell a something about it...",
+      infoSectionTitle: "Let\'s add some information about your survey",
+      infoNameField: "Give it a Name",
+      infoDescField: "Tell a something about it...",
+      contentTitle: "Add questions here",
       tooltips: {
         saveChanges: "Save changes",
         discardChanges: "Discard Changes"

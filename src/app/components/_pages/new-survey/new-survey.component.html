@@ -1,21 +1,36 @@
 <div class="page-wrapper">
   <section class="header">
-    <h3>{{ surveyName }}</h3>
+    <h1>{{ surveyName }}</h1>
   </section>
 
   <section class="info">
-    <app-card [header]="texts.surveyInfo">
+    <app-card [header]="texts.infoSectionTitle">
       <div class="info-fields">
-        <app-input [label]="texts.surveyNameField" (onInput)="setSurveyName($event)"></app-input>
-        <app-textarea [label]="texts.surveyDescField"></app-textarea>
+        <app-input [label]="texts.infoNameField" (onInput)="setSurveyName($event)"></app-input>
+        <app-textarea [label]="texts.infoDescField"></app-textarea>
       </div>
     </app-card>
+  </section>
+
+  <section class="content">
+    <h3>{{ texts.contentTitle }}</h3>
+    <div class="question-wrapper" *ngFor="let quest of surveyData.questions">
+      <app-card [header]="texts.infoSectionTitle">
+        <div class="info-fields">
+          <app-input [label]="texts.infoNameField" (onInput)="setSurveyName($event)"></app-input>
+          <app-textarea [label]="texts.infoDescField"></app-textarea>
+        </div>
+      </app-card>
+    </div>
   </section>
 
   <section class="controls">
     <div class="controls-wrapper">
       <button pButton pRipple type="button" icon="pi pi-times"
         class="p-button-rounded p-button-outlined p-button-danger" [pTooltip]="texts.tooltips.discardChanges"
+        tooltipPosition="top"></button>
+      <button pButton pRipple type="button" icon="pi pi-plus"
+        class="p-button-rounded p-button-outlined p-button-warning" [pTooltip]="texts.tooltips.discardChanges"
         tooltipPosition="top"></button>
       <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-success"
         [pTooltip]="texts.tooltips.saveChanges" tooltipPosition="top"></button>
