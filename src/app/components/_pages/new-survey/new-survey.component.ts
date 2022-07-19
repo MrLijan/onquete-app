@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Survey } from '@/app/types/survey.type';
+import { Survey } from '@src/app/types/survey.type';
 
 @Component({
   selector: 'app-new-survey',
@@ -15,9 +15,9 @@ export class NewSurveyComponent implements OnInit {
     description: '',
     questions: [
       { id: 1, title: "Give me some question", type: 1 },
-      { id: 2, title: "Give me some question", type: 1 },
-      { id: 3, title: "Give me some question", type: 1 },
-      { id: 4, title: "Give me some question", type: 1 },
+      // { id: 2, title: "Give me some question", type: 1 },
+      // { id: 3, title: "Give me some question", type: 1 },
+      // { id: 4, title: "Give me some question", type: 1 },
     ],
   };
 
@@ -50,6 +50,10 @@ export class NewSurveyComponent implements OnInit {
     if (event.target.value === '') {
       this.surveyName = this.texts.nonameSurvey;
     }
+  }
+
+  log(event: any) {
+    console.log(event);
   }
 
 }

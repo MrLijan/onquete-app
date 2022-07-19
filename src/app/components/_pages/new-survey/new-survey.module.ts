@@ -9,6 +9,8 @@ import { BaseComponentsModule } from '../../_base/base-components.module';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from "primeng/button";
 import { TooltipModule } from 'primeng/tooltip';
+import { WidgetComponentsModule } from '@components/_widgets/widgets.module';
+
 
 const routes: Routes = [
   {
@@ -27,10 +29,11 @@ const routes: Routes = [
     CardModule,
     InputTextModule,
     InputTextareaModule,
-    BaseComponentsModule,
     FormsModule,
     ButtonModule,
-    TooltipModule
+    TooltipModule,
+    BaseComponentsModule,
+    WidgetComponentsModule
   ],
   exports: []
 })
