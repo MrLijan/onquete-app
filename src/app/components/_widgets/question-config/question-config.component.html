@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <app-card>
+    <div class="config-section">
+      <!-- TYPE -->
+      <app-dropdown class="question-type" [options]="['liram', 'jan']"></app-dropdown>
+      <!-- LABLE -->
+      <app-input class="label-input" [label]="texts.questionLabel"></app-input>
+    </div>
+
+    <!-- if OPTIONS -->
+    <div class="question-options" *ngIf="true">
+      <app-input class="label-input" [label]="texts.optionsLabel" (onInput)="setQuestionOptions($event)"></app-input>
+    </div>
+
+    <!-- SLOT FOR EXAMPLE -->
+    <div class="question-demo" *ngIf="true">
+      <h4>{{texts.demoQuestionTitle}}</h4>
+      <div class="question-render">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </app-card>
+</div>

@@ -1,0 +1,44 @@
+$bottom-margin: 10px;
+
+.config-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: $bottom-margin;
+
+  & > * {
+    margin-right: 10px;
+  }
+
+  .question-type {
+    flex-grow: 0.4;
+  }
+
+  .label-input {
+    flex-grow: 1.6;
+  }
+}
+
+.question-options {
+  display: flex;
+  margin-bottom: $bottom-margin;
+
+  .label-input {
+    flex-grow: 0.4;
+  }
+}
+
+.question-demo {
+  margin-top: 50px;
+  width: 100%;
+  color: var(--text-color);
+
+
+  .question-render {
+    margin-top: 10px;
+    min-height: 50px;
+    border: 1px dashed var(--surface-400);
+    border-radius: var(--app-border-radius);
+    padding: 20px;
+  }
+}
