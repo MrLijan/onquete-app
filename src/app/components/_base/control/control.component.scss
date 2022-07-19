@@ -1,0 +1,10 @@
+.control-wrapper {
+  padding: 10px 5px;
+  min-width: 300px;
+  box-shadow: var(--app-shadow-03);
+  border-radius: 100px;
+  background-color: var(--surface-a);
+  border: 2px solid var(--surface-border);
+  display: flex;
+  justify-content: space-around;
+}
