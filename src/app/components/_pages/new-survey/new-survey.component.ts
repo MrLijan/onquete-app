@@ -32,7 +32,7 @@ export class NewSurveyComponent implements OnInit {
       infoSectionTitle: "Let\'s add some information about your survey",
       infoNameField: "Give it a Name",
       infoDescField: "Tell a something about it...",
-      contentTitle: "Add questions here",
+      contentTitle: "Add your questions here:",
       tooltips: {
         saveChanges: "Save changes",
         discardChanges: "Discard Changes"

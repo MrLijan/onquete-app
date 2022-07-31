@@ -14,9 +14,9 @@
 
   <section class="content">
     <h3>{{ texts.contentTitle }}</h3>
-    <div class="question-wrapper" *ngFor="let quest of surveyData.questions">
+    <div class="question-wrapper" *ngFor="let question of surveyData.questions">
       <app-question-config>
-
+        <app-question></app-question>
       </app-question-config>
     </div>
   </section>
