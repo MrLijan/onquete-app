@@ -15,6 +15,7 @@ export class InputComponent implements OnInit {
   }
 
   emitEvent(event: any) {
+    console.log(event);
     this.onInput.emit(event);
   }
 

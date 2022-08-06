@@ -1,0 +1,23 @@
+<div class="page-wrapper">
+  <section class="header">
+    <h1>{{ surveyName }}</h1>
+  </section>
+
+  <section class="info">
+    <app-card>
+      <p class="description">{{ surveyDescription }}</p>
+      <div class="details">
+        <p-tag [value]="survey.author" icon="pi pi-user"></p-tag>
+        <p-tag [value]="surveyId.toString()" icon="pi pi-key" severity="success"></p-tag>
+      </div>
+    </app-card>
+  </section>
+
+  <section class="content">
+    <div class="question-wrapper" *ngFor="let question of survey.questions">
+      <app-question [title]="question.label" [kind]="question.type" [required]="true" [options]="question?.options">
+
+      </app-question>
+    </div>
+  </section>
+</div>
