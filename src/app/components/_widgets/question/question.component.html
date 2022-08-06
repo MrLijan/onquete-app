@@ -7,8 +7,8 @@
     <div class="content" [ngSwitch]="questionKind">
       <!-- Component loader will be here -->
       <app-dropdown *ngSwitchCase="questionTypes.SELECT" [options]="options" (onSelect)="onChangeHandler($event)"></app-dropdown>
-      <app-textarea *ngSwitchCase="questionTypes.PARAGRAPH" (onChange)="onChangeHandler($event)"></app-textarea>
-      <app-input *ngSwitchDefault (onChange)="onChangeHandler($event)"></app-input>
+      <app-textarea *ngSwitchCase="questionTypes.PARAGRAPH" (onInput)="onChangeHandler($event)"></app-textarea>
+      <app-input *ngSwitchDefault (onInput)="onChangeHandler($event)"></app-input>
     </div>
   </app-card>
 </div>
