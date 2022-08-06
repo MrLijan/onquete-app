@@ -1,12 +1,15 @@
 <div class="wrapper">
   <app-card>
     <div class="header">
-      <h4>{{ title }}</h4>
+      <h4>
+        {{ title }}
+      </h4>
+      <span [hidden]="!required" class="required-mark">*</span>
     </div>
-    {{kind}}
     <div class="content" [ngSwitch]="questionKind">
       <!-- Component loader will be here -->
-      <app-dropdown *ngSwitchCase="questionTypes.SELECT" [options]="options" (onSelect)="onChangeHandler($event)"></app-dropdown>
+      <app-dropdown *ngSwitchCase="questionTypes.SELECT" [options]="options" (onSelect)="onChangeHandler($event)">
+      </app-dropdown>
       <app-textarea *ngSwitchCase="questionTypes.PARAGRAPH" (onInput)="onChangeHandler($event)"></app-textarea>
       <app-input *ngSwitchDefault (onInput)="onChangeHandler($event)"></app-input>
     </div>

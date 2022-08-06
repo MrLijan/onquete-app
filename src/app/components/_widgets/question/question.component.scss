@@ -1,7 +1,21 @@
 .wrapper {
   .header {
+    display: flex;
+
     h4 {
+      text-align: left;
+      line-height: 28px;
       color: var(--text-color);
+    }
+
+    .required-mark {
+      align-self: flex-end;
+      width: auto;
+      height: fit-content;
+      margin: 0 5px;
+      line-height: 28px;
+      font-size: 1.4em;
+      color: var(--red-600);
     }
   }
 }

@@ -49,6 +49,7 @@ export class SurveyComponent implements OnInit {
           {
             "key": "652416",
             "type": "short",
+            "required": true,
             "label": "Who are some of your heroes?",
             "explanation": null,
             "options": []
@@ -56,6 +57,7 @@ export class SurveyComponent implements OnInit {
           {
             "key": "652416",
             "type": "multi",
+            "required": false,
             "label": "What is the best random act of kindness you've ever witnessed?",
             "explanation": "If you've been searching for a way to get random questions, you've landed on the correct webpage.",
             "options": [
@@ -72,6 +74,7 @@ export class SurveyComponent implements OnInit {
           {
             "key": "652416",
             "type": "select",
+            "required": false,
             "label": "What is the best random act of kindness you've ever witnessed?",
             "explanation": "If you've been searching for a way to get random questions, you've landed on the correct webpage.",
             "options": [
@@ -88,6 +91,7 @@ export class SurveyComponent implements OnInit {
           {
             "key": "652416",
             "type": "paragraph",
+            "required": true,
             "label": "What is the best random act of kindness you've ever witnessed?",
             "explanation": "If you've been searching for a way to get random questions, you've landed on the correct webpage.",
             "options": [

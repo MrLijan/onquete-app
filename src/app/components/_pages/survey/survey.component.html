@@ -15,7 +15,7 @@
 
   <section class="content">
     <div class="question-wrapper" *ngFor="let question of survey.questions">
-      <app-question [title]="question.label" [kind]="question.type" [required]="true" [options]="question?.options">
+      <app-question [title]="question.label" [kind]="question.type" [required]="question.required" [options]="question?.options">
 
       </app-question>
     </div>
