@@ -1,16 +1,20 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders, HttpRequest } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  basePath: string = '';
+  private basePath: string = '';
 
   constructor(
     private http: HttpClient,
   ) { }
+
+  public setBasePath(value: string) {
+    this.basePath = value;
+  }
 
   public async get(path: string): Promise<Observable<any>> {
     return this.send('GET', path);
