@@ -13,6 +13,4 @@ export class OnqueteApi {
   public createSurvey(payload: Survey) {
     return this.api.post('/create', payload);
   }
-
-
 }

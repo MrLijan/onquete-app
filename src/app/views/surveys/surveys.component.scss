@@ -1,0 +1,18 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  margin-top: 50px;
+  padding-bottom: 50px;
+
+  & > * {
+    width: 70%;
+  }
+}
+
+.content-table {
+  border-radius: 100px;
+}

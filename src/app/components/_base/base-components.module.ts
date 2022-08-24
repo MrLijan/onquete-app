@@ -11,6 +11,7 @@ import { InputComponent } from './input/input.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { ControlComponent } from './control/control.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 
 const components = [
@@ -19,6 +20,7 @@ const components = [
   TextareaComponent,
   ControlComponent,
   DropdownComponent,
+  PageHeaderComponent
 ]
 
 @NgModule({

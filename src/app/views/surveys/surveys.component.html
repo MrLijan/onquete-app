@@ -1,0 +1,27 @@
+<div class="page-wrapper">
+  <section class="header">
+    <app-page-header [value]="texts.header"></app-page-header>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content">
+    <app-card>
+      <p-table [value]="data" class="content-table">
+        <ng-template pTemplate="header">
+          <tr>
+            <th *ngFor="let col of columns">
+              {{ col.header }}
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-survey>
+          <tr>
+            <td *ngFor="let col of columns">
+              {{ survey[col.field] }}
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </app-card>
+  </section>
+</div>
